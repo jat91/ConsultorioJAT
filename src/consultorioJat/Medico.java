@@ -25,7 +25,7 @@ public class Medico {
         Connection con=null;
         
             try{        
-            	con = DriverManager.getConnection("jdbc:mysql://localhost:3306/consultoriojat?autoReconnect=true&useSSL=false", "root","joaquin2023");  
+            	con = DriverManager.getConnection("jdbc:mysql://localhost:3307/consultoriojat?autoReconnect=true&useSSL=false", "root","");  
             	Statement st = con.createStatement();
             	st.executeUpdate(sql);
 		        System.out.println("Medico agregado correctamente");
@@ -38,7 +38,7 @@ public class Medico {
         Connection con=null;
         
             try{        
-            	con = DriverManager.getConnection("jdbc:mysql://localhost:3306/consultoriojat?autoReconnect=true&useSSL=false", "root","joaquin2023");  
+            	con = DriverManager.getConnection("jdbc:mysql://localhost:3307/consultoriojat?autoReconnect=true&useSSL=false", "root","");  
             	Statement st = con.createStatement();
             	ResultSet rs = st.executeQuery("SELECT * FROM medico");
             	System.out.println("Matricula - Nombre - Apellido - Especialidad");
@@ -55,7 +55,7 @@ public class Medico {
 		String sql = "DELETE FROM medico where medMat = '"+matricula+"'";
 		Connection con=null;
 		try{        
-        	con = DriverManager.getConnection("jdbc:mysql://localhost:3306/consultoriojat?autoReconnect=true&useSSL=false", "root","joaquin2023");  
+        	con = DriverManager.getConnection("jdbc:mysql://localhost:3307/consultoriojat?autoReconnect=true&useSSL=false", "root","");  
         	Statement st = con.createStatement();        	
         	if (st.getUpdateCount() > 0) {
         		st.executeUpdate(sql);

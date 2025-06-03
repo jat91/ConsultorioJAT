@@ -240,10 +240,10 @@ public class Consultorio {
 	public static void hacerConexion() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/consultoriojat?autoReconnect=true&useSSL=false","root","joaquin2023");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3307/consultoriojat?autoReconnect=true&useSSL=false","root","");
 			System.out.print("BIENVENIDO AL CONSULTORIO JAT\n");
 		} catch (SQLException ex) {
-            System.out.println("Error al conectarse al sistema. Ponganse en contacto con IT");
+            System.out.println(ex.getMessage());
             System.exit(0);
         } catch (Exception e) {
         	System.out.println("Error al conectarse al sistema. Ponganse en contacto con IT");

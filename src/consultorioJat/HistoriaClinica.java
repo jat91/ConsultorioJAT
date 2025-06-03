@@ -30,7 +30,7 @@ public class HistoriaClinica {
         Connection con=null;
         
             try{        
-            	con = DriverManager.getConnection("jdbc:mysql://localhost:3306/consultoriojat?autoReconnect=true&useSSL=false", "root","joaquin2023");  
+            	con = DriverManager.getConnection("jdbc:mysql://localhost:3307/consultoriojat?autoReconnect=true&useSSL=false", "root","");  
             	Statement st = con.createStatement();
             	st.executeUpdate(sql);
 		        System.out.println("Historia clinica agregado correctamente");
@@ -43,7 +43,7 @@ public class HistoriaClinica {
         Connection con=null;
         
             try{        
-            	con = DriverManager.getConnection("jdbc:mysql://localhost:3306/consultoriojat?autoReconnect=true&useSSL=false", "root","joaquin2023");  
+            	con = DriverManager.getConnection("jdbc:mysql://localhost:3307/consultoriojat?autoReconnect=true&useSSL=false", "root","");  
             	Statement st = con.createStatement();
             	ResultSet rs = st.executeQuery("SELECT * FROM historiaclinica");
             	System.out.println("Id - Fecha - Paciente - Medico - Diagnostico - Tratamiento");
